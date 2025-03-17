@@ -39,7 +39,7 @@ The easiest way to run the service is with Docker:
 
 ```bash
 # Start the service with Docker Compose
-docker-compose up -d
+docker compose up -d
 ```
 
 The API will be available at http://localhost:8000.
