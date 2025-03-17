@@ -30,3 +30,11 @@ class ActivityResponse(BaseModel):
     )
     activities: List[Activity] = Field(..., description="List of suggested activities")
 
+
+class ErrorResponse(BaseModel):
+    """Model for API error responses."""
+
+    detail: str = Field(..., description="Error description")
+    error_code: Optional[str] = Field(
+        None, description="Optional error code for categorizing errors"
+    )

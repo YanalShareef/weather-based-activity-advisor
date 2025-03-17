@@ -1,6 +1,7 @@
 import os
 from fastapi import FastAPI
 from dotenv import load_dotenv
+from app.routers import activities
 
 # Load environment variables
 load_dotenv()
@@ -11,6 +12,9 @@ app = FastAPI(
     description="A service that suggests activities based on the current weather in a city",
     version="0.1.0",
 )
+
+# Include routers
+app.include_router(activities.router)
 
 
 @app.get("/")

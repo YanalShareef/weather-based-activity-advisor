@@ -32,12 +32,11 @@ class LLMService:
         )
 
         # Create the output parser and prompt template
-        self.output_parser = JsonOutputParser(pydantic_object= ActivityResponse)
+        self.output_parser = JsonOutputParser(pydantic_object=ActivityResponse)
         self.prompt_template = self._create_prompt_template()
 
         # Build the chain
         self.chain = self._build_chain()
-
 
     def _create_prompt_template(self):
         """Create the prompt template for activity generation."""
