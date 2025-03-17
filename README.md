@@ -59,9 +59,9 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 # Start the service
-uvicorn app.main:app --reload --port 8000
+uvicorn app.main:app --port 8000
 or 
-fastapi run app/main.py --reload
+fastapi run app/main.py 
 ```
 The API will be available at http://localhost:8000.
 ## API Usage
