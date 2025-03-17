@@ -12,6 +12,7 @@ app = FastAPI(
     version="0.1.0",
 )
 
+
 @app.get("/")
 async def root():
     """Root endpoint that returns basic service information."""
