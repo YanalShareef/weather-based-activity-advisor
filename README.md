@@ -1,5 +1,5 @@
 # weather-based-activity-advisor
-A Python service that recommends activities based on current city weather using Langchain and LLMs.
+A Python service that recommends activities based on current city weather using Langchain, OpenAI API and OpenWeatherMap API.
 
 ## Overview
 
@@ -9,12 +9,19 @@ This service:
 3. Uses Langchain and an LLM to generate structured activity suggestions
 4. Returns the suggestions in a well-defined JSON format
 
-## Installation
 
+
+## Prerequisites
+- Python 3.9+
+- OpenAI API key
+- OpenWeatherMap API key
+- Docker and Docker Compose (optional, for containerized deployment)
+
+## Installation
 ```bash
 # Clone the repository
 git clone https://github.com/YanalShareef/weather-based-activity-advisor.git
-cd weather-activity-suggestions
+cd weather-based-activity-advisor
 
 # Copy and edit the environment file
 cp .env.example .env
@@ -26,7 +33,7 @@ OPENWEATHER_API_KEY=your_openweather_api_key_here
 
 ## Running the Service
 
-### Way 1: Quick Start with Docker
+### Option 1: Using Docker (Recommended)
 
 The easiest way to run the service is with Docker:
 
@@ -37,7 +44,7 @@ docker-compose up -d
 
 The API will be available at http://localhost:8000.
 
-### Way 2: Without Docker 
+### Option 2: Local Development Environment
 
 If you prefer to run the service without Docker:
 
@@ -117,7 +124,7 @@ The prompt engineering for this service was designed to achieve structured, rele
    - name: Short, descriptive name
    - description: Brief explanation of what the activity involves
    - category: Classification of the activity type
-   - 
+   
 3. **Injected Format Instructions**: The parser's format instructions are dynamically inserted into the prompt template as {format_instructions}. 
    
 4. **Weather Context**: Complete weather details (temperature, conditions, humidity, wind speed) are provided to generate weather-appropriate suggestions.
