@@ -125,8 +125,10 @@ The prompt engineering for this service was designed to achieve structured, rele
    - description: Brief explanation of what the activity involves
    - category: Classification of the activity type
    
-3. **Injected Format Instructions**: The parser's format instructions are dynamically inserted into the prompt template as {format_instructions}. 
-   
+3. **Injected Format Instructions**: We dynamically inject the output parser's format instructions into the prompt template {format_instructions}. 
+   ```python
+   "format_instructions": self.output_parser.get_format_instructions()
+   ```
 4. **Weather Context**: Complete weather details (temperature, conditions, humidity, wind speed) are provided to generate weather-appropriate suggestions.
 
 5. **Output Schema**: Using Langchain's structured output parsers to ensure consistent JSON formatting.
