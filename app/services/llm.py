@@ -5,8 +5,8 @@ from langchain.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
-from ..models.response import ActivityResponse
-from ..utils.errors import LLMError
+from app.models.response import ActivityResponse
+from app.utils.errors import LLMError
 from typing import Dict, Any
 
 # Load environment variables
