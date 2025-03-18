@@ -1,5 +1,5 @@
 # weather-based-activity-advisor
-A Python service that recommends activities based on current city weather using Langchain, OpenAI API and OpenWeatherMap API.
+A Python service that recommends activities based on the current weather of a city using Langchain, OpenAI API and OpenWeatherMap API.
 
 ## Overview
 
@@ -35,7 +35,7 @@ OPENWEATHER_API_KEY=your_openweather_api_key_here
 
 ### Option 1: Using Docker (Recommended)
 
-The easiest way to run the service is with Docker:
+The easiest way to run the service is with Docker compose:
 
 ```bash
 # Start the service with Docker Compose
